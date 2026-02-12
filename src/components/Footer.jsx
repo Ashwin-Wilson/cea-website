@@ -44,7 +44,7 @@ const Footer = () => {
                         {/* Replace with actual Google Maps Iframe if needed */}
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d80505.44769300119!2d76.72876879386149!3d9.140990686670904!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0611e606b00001%3A0x27dc62f29d54f358!2sCollege%20Of%20Engineering%2C%20Adoor!5e0!3m2!1sen!2sin!4v1770889228814!5m2!1sen!2sin"
-                            allowfullscreen=""
+                            allowFullScreen=""
                             loading="lazy"
                             className="w-full h-full border-0">
                             </iframe>
