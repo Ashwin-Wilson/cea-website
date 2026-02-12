@@ -23,11 +23,11 @@ const Navbar = () => {
       <nav className="flex items-center justify-between px-6 md:px-12 py-4 bg-white shadow-sm sticky top-0 z-50">
         {/* Logo Section */}
         <a href="/">
-        <img
-          src="public/images/cea-logo-black.png"
-          className='w-45 md:w-50'
-          alt="cea-logo" />
-          </a>
+          <img
+            src="public/images/cea-logo-black.png"
+            className='w-45 md:w-50'
+            alt="cea-logo" />
+        </a>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex flex-col">
@@ -50,7 +50,9 @@ const Navbar = () => {
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Principal</li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Office Administration</li>
                   <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Audit</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Service Rules</li>
+                  <a href="https://ihrd.ac.in/index.php/orders-gos">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Service Rules</li>
+                  </a>
                 </ul>
               )}
             </li>
@@ -186,8 +188,8 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         className={`lg:hidden fixed top-[72px] left-0 right-0 bg-white shadow-lg z-40 transition-all duration-300 ease-in-out ${isMobileMenuOpen
-            ? 'max-h-screen opacity-100'
-            : 'max-h-0 opacity-0 overflow-hidden'
+          ? 'max-h-screen opacity-100'
+          : 'max-h-0 opacity-0 overflow-hidden'
           }`}
       >
         <ul className="flex flex-col py-4 px-6 gap-4 text-gray-700 font-medium text-sm">
