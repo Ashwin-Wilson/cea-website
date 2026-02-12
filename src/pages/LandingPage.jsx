@@ -1,12 +1,17 @@
 import React from 'react';
-
+import NewsCarousel from '../components/NewsCarousel';
 const LandingPage = () => {
   return (
-    <div className="font-sans text-gray-800 overflow-x-hidden">
+    <div className="font-sans text-gray-800 overflow-x-hidden" style={{
+      backgroundImage: "url('/images/cea-image.png')",
+      backgroundAttachment: 'fixed',
+      backgroundPosition: 'center',
+      backgroundSize: 'cover'
+    }}>
 
       {/* Hero Section */}
-      <header className="relative h-[400px] md:h-[500px] flex items-center bg-cover bg-center" 
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&w=1350&q=80')" }}>
+      <header className="relative h-[400px] md:h-[500px] flex items-center"
+      >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 px-6 md:px-20 border-l-4 md:border-l-8 border-yellow-400 mx-4 md:ml-20">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-white italic tracking-tighter leading-tight">
@@ -43,20 +48,7 @@ const LandingPage = () => {
       <section className="bg-gray-50 py-10 px-4 md:px-10 lg:px-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* News Column */}
         <div className="lg:col-span-2">
-          <h2 className="text-2xl md:text-3xl font-bold italic mb-6 border-b-4 border-blue-800 inline-block">Latest News & Events</h2>
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
-            <div className="h-48 md:h-80 bg-red-800 flex items-center justify-center relative px-4">
-               <div className="text-center text-white z-10">
-                  <h4 className="text-xl md:text-4xl font-black tracking-widest leading-tight">REGISTRATION OPENED</h4>
-                  <p className="mt-2 text-xs md:text-xl italic">24-HOUR NATIONAL LEVEL HACKATHON</p>
-               </div>
-               <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle,_#000_10%,_transparent_10%)] bg-[length:15px_15px]"></div>
-            </div>
-            <div className="p-4 md:p-6">
-              <span className="text-blue-600 font-bold text-[10px] md:text-xs uppercase">Research</span>
-              <h4 className="text-lg md:text-xl font-bold mt-1 italic">CEA Researchers Develop Sustainable Tech...</h4>
-            </div>
-          </div>
+          <NewsCarousel />
         </div>
 
         {/* Notice Board Column */}
@@ -87,7 +79,7 @@ const LandingPage = () => {
           </div>
           <button className="bg-blue-900 text-white w-fit px-4 py-1.5 text-[10px] rounded hover:bg-blue-800 transition-all">Read More</button>
         </div>
-        
+
         <div className="bg-white p-6 rounded shadow-sm border border-gray-100">
           <h4 className="text-blue-900 font-bold text-lg mb-3 border-b-2 border-blue-900 inline-block uppercase">Vision</h4>
           <p className="italic text-gray-600 text-sm leading-relaxed">
@@ -104,7 +96,73 @@ const LandingPage = () => {
           </ul>
         </div>
       </section>
-      
+      <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 font-sans">
+        <div className="max-w-6xl mx-auto">
+
+
+          {/* Principal Message Card */}
+          <div className="bg-white rounded-3xl shadow-xl overflow-hidden mb-16 border border-gray-100 p-8 md:p-12">
+            <div className="flex flex-col md:flex-row items-center gap-12">
+
+              {/* Text Content */}
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-blue-800 mb-4">
+                  Message from the Principal
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-6 italic">
+                  "Being the part of an organization clustering eighty plus educational institutions with serene vision, set to adapt the latest educational challenges with the motto “Think globally acts locally” is our strength. Our alumni have proved their commitment by contributing to the industrial and commercial sector and supporting the society."
+                </p>
+                <div className="border-l-4 border-blue-600 pl-4">
+                  <span className="block text-xl font-bold text-blue-900">— Dr. Nisha Kuruvilla</span>
+                </div>
+              </div>
+
+              {/* Profile Section */}
+              <div className="w-32 h-32 rounded-full border-4 border-blue-400 overflow-hidden shadow-lg">
+                {/* Image Field */}
+                <img
+                  src="/images/principal-img.jpeg"
+                  alt="Principal"
+                  className="w-full h-full object-cover bg-gray-200"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Section Header */}
+          <h2 className="text-4xl font-bold text-center text-blue-900 mb-12">
+            Departments
+          </h2>
+          {/* Departments Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              "Mechanical Engineering",
+              "Electronics & Engineering",
+              "Electrical & Engineering",
+              "Eirisud Bice",
+              "Electrical Engineering",
+              "Eletrical Engineering"
+            ].map((dept, index) => (
+              <div
+                key={index}
+                className="bg-white p-10 rounded-2xl shadow-md hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center border-b-4 border-transparent hover:border-blue-500"
+              >
+                {/* Icon Placeholder */}
+                <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                  {/* Replace with Lucide-react or FontAwesome icons */}
+                  <div className="w-10 h-10 border-2 border-white rounded-md flex items-center justify-center text-white font-bold">
+                    {index + 1}
+                  </div>
+                </div>
+                <h4 className="text-xl font-bold text-gray-800 leading-tight">
+                  Department of <br /> {dept}
+                </h4>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </div>
       {/* Footer Placeholder */}
       <footer className="bg-gray-100 py-6 text-center text-[10px] text-gray-400">
         © 2026 College of Engineering Adoor. All rights reserved.
