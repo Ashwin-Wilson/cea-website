@@ -47,16 +47,24 @@ const Navbar = () => {
                   <a href="/board-of-governors">
                     <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Board of Governors</li>
                   </a>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Principal</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Office Administration</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Audit</li>
+                  <a href="/principal">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Principal</li>
+                  </a>
+                  <a href="/administartion-office-administration">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Office Administration</li>
+                  </a>
+                  <a href="/audit">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Audit</li>
+                  </a>
                   <a href="https://ihrd.ac.in/index.php/orders-gos" target="_blank" rel="noopener noreferrer">
                     <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Service Rules</li>
                   </a>
                 </ul>
               )}
             </li>
-            <li className="hover:text-blue-900 cursor-pointer">Admissions</li>
+            <a href="/admissions">
+              <li className="hover:text-blue-900 cursor-pointer">Admissions</li>
+            </a>
 
             <li
               className="relative"
@@ -91,36 +99,36 @@ const Navbar = () => {
               </div>
               {openDropdown === 'Departments' && (
                 <ul className="absolute top-full left-0 w-64 bg-white shadow-lg rounded-md py-2 z-50">
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Mechanical Engineering</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Electrical and Electronics Engineering</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Electronics and Communication Engineering</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Computer Science Engineering</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Computer Science Engineering (Data Science)</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Applied Sciences</li>
+                  <a href="/mechanical-department">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Mechanical Engineering</li>
+                  </a>
+                  <a href="/electrical-department">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Electrical and Electronics Engineering</li>
+                  </a>
+                  <a href="/electronics-and-communication-department">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Electronics and Communication Engineering</li>
+                  </a>
+                  <a href="/computer-science-department">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Computer Science Engineering</li>
+                  </a>
+                  <a href="/data-science-department">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Computer Science Engineering (Data Science)</li>
+                  </a>
+                  <a href="/applied-science-department">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Applied Sciences</li>
+                  </a>
                 </ul>
               )}
             </li>
-            <li
-              className="relative"
-              onMouseEnter={() => handleMouseEnter('Activities')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <div className="flex items-center gap-1 cursor-pointer hover:text-blue-900">
-                <span>Activities</span>
-                <ChevronDown size={16} />
-              </div>
-              {openDropdown === 'Activities' && (
-                <ul className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md py-2 z-50">
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">NSS</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">IEEE</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">ASME</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">SAE CEA</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Department Clubs</li>
-                </ul>
-              )}
-            </li>
-            <li className="hover:text-blue-900 cursor-pointer">Placement</li>
-            <li className="hover:text-blue-900 cursor-pointer">PTA</li>
+            <a href="/activities">
+              <li className="hover:text-blue-900 cursor-pointer">Activities</li>
+            </a>
+            <a href="/placement">
+              <li className="hover:text-blue-900 cursor-pointer">Placement</li>
+            </a>
+            <a href="/pta">
+              <li className="hover:text-blue-900 cursor-pointer">PTA</li>
+            </a>
 
             <li
               className="relative"
@@ -133,10 +141,18 @@ const Navbar = () => {
               </div>
               {openDropdown === 'Institution' && (
                 <ul className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md py-2 z-50">
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Institution Structure</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Campus Layout</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">College Hostels</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">College Bus</li>
+                  <a href="/institution-structure">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Institution Structure</li>
+                  </a>
+                  <a href="/campus-layout">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Campus Layout</li>
+                  </a>
+                  <a href="/hostel">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">College Hostels</li>
+                  </a>
+                  <a href="/college-bus">
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">College Bus</li>
+                  </a>
                 </ul>
               )}
             </li>
@@ -162,12 +178,23 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <li className="hover:text-blue-900 cursor-pointer">Library</li>
-            <li className="hover:text-blue-900 cursor-pointer">Alumini</li>
-            <li className="hover:text-blue-900 cursor-pointer">Grievance</li>
-            <li className="hover:text-blue-900 cursor-pointer">Quotation / Tenders</li>
-            <li className="hover:text-blue-900 cursor-pointer">Career</li>
-            <li className="hover:text-blue-900 cursor-pointer">Contact Us</li>
+            <a href="/library">
+              <li className="hover:text-blue-900 cursor-pointer">Library</li>
+            </a>
+            <a href="/alumni">
+              <li className="hover:text-blue-900 cursor-pointer">Alumini</li>
+            </a>
+            <a href="/student-grievance-portal">
+              <li className="hover:text-blue-900 cursor-pointer">Grievance</li>
+            </a>
+            <a href="/quotation">
+              <li className="hover:text-blue-900 cursor-pointer">Quotation / Tenders</li>
+            </a>
+            <a href="/careers">
+
+              <li className="hover:text-blue-900 cursor-pointer">Career</li>
+            </a>
+              <li className="hover:text-blue-900 cursor-pointer">Contact Us</li>
           </ul>
         </div>
 
