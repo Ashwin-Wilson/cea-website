@@ -11,6 +11,8 @@ import ElectricalDepartment from "./pages/Departments/ElectricalAndElectronics";
 import ElectricalAndElectronicsDepartment from "./pages/Departments/ElectronicsDepartment";
 import DataScienceDepartment from "./pages/Departments/DataScience";
 import AppliedScienceDepartment from "./pages/Departments/AppliedScience";
+import StudentGrievancePortal from "./pages/StudentGrievancePortal";
+import AlumniPage from "./pages/AlumniPage";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -45,6 +47,11 @@ function App() {
           path="/applied-science-department"
           element={<AppliedScienceDepartment />}
         />
+        <Route
+          path="/student-grievance-portal"
+          element={<StudentGrievancePortal />}
+        />
+        <Route path="/alumni" element={<AlumniPage />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <Footer />
