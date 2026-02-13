@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,8 +25,9 @@ const Navbar = () => {
         <a href="/">
           <img
             src="images/cea-logo-black.png"
-            className='w-45 md:w-50'
-            alt="cea-logo" />
+            className="w-45 md:w-50"
+            alt="cea-logo"
+          />
         </a>
 
         {/* Desktop Links */}
@@ -35,29 +36,43 @@ const Navbar = () => {
           <ul className="flex gap-6 xl:gap-8 text-gray-700 font-medium text-sm">
             <li
               className="relative"
-              onMouseEnter={() => handleMouseEnter('Administration')}
+              onMouseEnter={() => handleMouseEnter("Administration")}
               onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center gap-1 cursor-pointer hover:text-blue-900">
                 <span>Administration</span>
                 <ChevronDown size={16} />
               </div>
-              {openDropdown === 'Administration' && (
+              {openDropdown === "Administration" && (
                 <ul className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md py-2 z-50">
                   <a href="/board-of-governors">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Board of Governors</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Board of Governors
+                    </li>
                   </a>
                   <a href="/principal">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Principal</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Principal
+                    </li>
                   </a>
                   <a href="/administartion-office-administration">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Office Administration</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Office Administration
+                    </li>
                   </a>
                   <a href="/audit">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Audit</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Audit
+                    </li>
                   </a>
-                  <a href="https://ihrd.ac.in/index.php/orders-gos" target="_blank" rel="noopener noreferrer">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Service Rules</li>
+                  <a
+                    href="https://ihrd.ac.in/index.php/orders-gos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Service Rules
+                    </li>
                   </a>
                 </ul>
               )}
@@ -68,54 +83,82 @@ const Navbar = () => {
 
             <li
               className="relative"
-              onMouseEnter={() => handleMouseEnter('Academics')}
+              onMouseEnter={() => handleMouseEnter("Academics")}
               onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center gap-1 cursor-pointer hover:text-blue-900">
                 <span>Academics</span>
                 <ChevronDown size={16} />
               </div>
-              {openDropdown === 'Academics' && (
+              {openDropdown === "Academics" && (
                 <ul className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md py-2 z-50">
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">College Committees</li>
-                  <a href="/public/database/Campus-rules.pdf" target="_blank" rel="noopener noreferrer">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" >Campus Rules</li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    College Committees
+                  </li>
+                  <a
+                    href="/public/database/Campus-rules.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Campus Rules
+                    </li>
                   </a>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">IQAC</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">KTU Website</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">AICTE Website</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Result</li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    IQAC
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    KTU Website
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    AICTE Website
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Result
+                  </li>
                 </ul>
               )}
             </li>
             <li
               className="relative"
-              onMouseEnter={() => handleMouseEnter('Departments')}
+              onMouseEnter={() => handleMouseEnter("Departments")}
               onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center gap-1 cursor-pointer hover:text-blue-900">
                 <span>Departments</span>
                 <ChevronDown size={16} />
               </div>
-              {openDropdown === 'Departments' && (
+              {openDropdown === "Departments" && (
                 <ul className="absolute top-full left-0 w-64 bg-white shadow-lg rounded-md py-2 z-50">
                   <a href="/mechanical-department">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Mechanical Engineering</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Dept. of Mechanical Engineering
+                    </li>
                   </a>
                   <a href="/electrical-department">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Electrical and Electronics Engineering</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Dept. of Electrical and Electronics Engineering
+                    </li>
                   </a>
                   <a href="/electronics-and-communication-department">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Electronics and Communication Engineering</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Dept. of Electronics and Communication Engineering
+                    </li>
                   </a>
                   <a href="/computer-science-department">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Computer Science Engineering</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Dept. of Computer Science Engineering
+                    </li>
                   </a>
                   <a href="/data-science-department">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Computer Science Engineering (Data Science)</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Dept. of Computer Science Engineering (Data Science)
+                    </li>
                   </a>
                   <a href="/applied-science-department">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Dept. of Applied Sciences</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Dept. of Applied Sciences
+                    </li>
                   </a>
                 </ul>
               )}
@@ -132,26 +175,34 @@ const Navbar = () => {
 
             <li
               className="relative"
-              onMouseEnter={() => handleMouseEnter('Institution')}
+              onMouseEnter={() => handleMouseEnter("Institution")}
               onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center gap-1 cursor-pointer hover:text-blue-900">
                 <span>Institution</span>
                 <ChevronDown size={16} />
               </div>
-              {openDropdown === 'Institution' && (
+              {openDropdown === "Institution" && (
                 <ul className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md py-2 z-50">
                   <a href="/institution-structure">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Institution Structure</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Institution Structure
+                    </li>
                   </a>
                   <a href="/campus-layout">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Campus Layout</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      Campus Layout
+                    </li>
                   </a>
                   <a href="/hostel">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">College Hostels</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      College Hostels
+                    </li>
                   </a>
                   <a href="/college-bus">
-                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">College Bus</li>
+                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                      College Bus
+                    </li>
                   </a>
                 </ul>
               )}
@@ -161,20 +212,30 @@ const Navbar = () => {
           <ul className="flex gap-6 xl:gap-8 text-gray-700 font-medium text-sm mt-4">
             <li
               className="relative"
-              onMouseEnter={() => handleMouseEnter('Downloads')}
+              onMouseEnter={() => handleMouseEnter("Downloads")}
               onMouseLeave={handleMouseLeave}
             >
               <div className="flex items-center gap-1 cursor-pointer hover:text-blue-900">
                 <span>Downloads</span>
                 <ChevronDown size={16} />
               </div>
-              {openDropdown === 'Downloads' && (
+              {openDropdown === "Downloads" && (
                 <ul className="absolute top-full left-0 w-48 bg-white shadow-lg rounded-md py-2 z-50">
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Students</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Staff</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Campus Rules</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Syllabus & Regulations</li>
-                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Question Papers</li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Students
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Staff
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Campus Rules
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Syllabus & Regulations
+                  </li>
+                  <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                    Question Papers
+                  </li>
                 </ul>
               )}
             </li>
@@ -188,13 +249,14 @@ const Navbar = () => {
               <li className="hover:text-blue-900 cursor-pointer">Grievance</li>
             </a>
             <a href="/quotation">
-              <li className="hover:text-blue-900 cursor-pointer">Quotation / Tenders</li>
+              <li className="hover:text-blue-900 cursor-pointer">
+                Quotation / Tenders
+              </li>
             </a>
             <a href="/careers">
-
               <li className="hover:text-blue-900 cursor-pointer">Career</li>
             </a>
-              <li className="hover:text-blue-900 cursor-pointer">Contact Us</li>
+            <li className="hover:text-blue-900 cursor-pointer">Contact Us</li>
           </ul>
         </div>
 
@@ -206,9 +268,33 @@ const Navbar = () => {
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
             )}
           </button>
         </div>
@@ -216,112 +302,275 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-[72px] left-0 right-0 bg-white shadow-lg z-40 transition-all duration-300 ease-in-out ${isMobileMenuOpen
-          ? 'max-h-screen opacity-100'
-          : 'max-h-0 opacity-0 overflow-hidden'
-          }`}
+        className={`lg:hidden fixed top-[72px] left-0 right-0 bg-white shadow-lg z-40 transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen
+            ? "max-h-screen opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
+        }`}
       >
         <ul className="flex flex-col py-4 px-6 gap-4 text-gray-700 font-medium text-sm">
           {/* Mobile Administration */}
           <li className="py-2 border-b border-gray-100">
-            <div className="flex items-center justify-between cursor-pointer hover:text-blue-900" onClick={() => toggleMobileDropdown('Administration')}>
+            <div
+              className="flex items-center justify-between cursor-pointer hover:text-blue-900"
+              onClick={() => toggleMobileDropdown("Administration")}
+            >
               <span>Administration</span>
-              <ChevronDown size={16} className={`transition-transform ${openMobileDropdown === 'Administration' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${openMobileDropdown === "Administration" ? "rotate-180" : ""}`}
+              />
             </div>
-            {openMobileDropdown === 'Administration' && (
+            {openMobileDropdown === "Administration" && (
               <ul className="pl-4 mt-2 space-y-2">
-                <li className="hover:text-blue-900 cursor-pointer">Board of Governors</li>
-                <li className="hover:text-blue-900 cursor-pointer">Principal</li>
-                <li className="hover:text-blue-900 cursor-pointer">Office Administration</li>
-                <li className="hover:text-blue-900 cursor-pointer">Audit</li>
-                <li className="hover:text-blue-900 cursor-pointer">Service Rules</li>
+                <a href="/board-of-governors">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Board of Governors
+                  </li>
+                </a>
+                <a href="/principal">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Principal
+                  </li>
+                </a>
+                <a href="/administartion-office-administration">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Office Administration
+                  </li>
+                </a>
+                <a href="/audit">
+                  <li className="hover:text-blue-900 cursor-pointer">Audit</li>
+                </a>
+                <a
+                  href="https://ihrd.ac.in/index.php/orders-gos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Service Rules
+                  </li>
+                </a>
               </ul>
             )}
           </li>
           {/* Mobile Academics */}
           <li className="py-2 border-b border-gray-100">
-            <div className="flex items-center justify-between cursor-pointer hover:text-blue-900" onClick={() => toggleMobileDropdown('Academics')}>
+            <div
+              className="flex items-center justify-between cursor-pointer hover:text-blue-900"
+              onClick={() => toggleMobileDropdown("Academics")}
+            >
               <span>Academics</span>
-              <ChevronDown size={16} className={`transition-transform ${openMobileDropdown === 'Academics' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${openMobileDropdown === "Academics" ? "rotate-180" : ""}`}
+              />
             </div>
-            {openMobileDropdown === 'Academics' && (
+            {openMobileDropdown === "Academics" && (
               <ul className="pl-4 mt-2 space-y-2">
-                <li className="hover:text-blue-900 cursor-pointer">College Committees</li>
-                <li className="hover:text-blue-900 cursor-pointer">Campus Rules</li>
+                <li className="hover:text-blue-900 cursor-pointer">
+                  College Committees
+                </li>
+                <a
+                  href="/public/database/Campus-rules.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Campus Rules
+                  </li>
+                </a>
                 <li className="hover:text-blue-900 cursor-pointer">IQAC</li>
-                <li className="hover:text-blue-900 cursor-pointer">KTU Website</li>
-                <li className="hover:text-blue-900 cursor-pointer">AICTE Website</li>
+                <li className="hover:text-blue-900 cursor-pointer">
+                  KTU Website
+                </li>
+                <li className="hover:text-blue-900 cursor-pointer">
+                  AICTE Website
+                </li>
                 <li className="hover:text-blue-900 cursor-pointer">Result</li>
               </ul>
             )}
           </li>
           {/* Mobile Departments */}
           <li className="py-2 border-b border-gray-100">
-            <div className="flex items-center justify-between cursor-pointer hover:text-blue-900" onClick={() => toggleMobileDropdown('Departments')}>
+            <div
+              className="flex items-center justify-between cursor-pointer hover:text-blue-900"
+              onClick={() => toggleMobileDropdown("Departments")}
+            >
               <span>Departments</span>
-              <ChevronDown size={16} className={`transition-transform ${openMobileDropdown === 'Departments' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${openMobileDropdown === "Departments" ? "rotate-180" : ""}`}
+              />
             </div>
-            {openMobileDropdown === 'Departments' && (
+            {openMobileDropdown === "Departments" && (
               <ul className="pl-4 mt-2 space-y-2">
-                <li className="hover:text-blue-900 cursor-pointer">Dept. of Mechanical Engineering</li>
-                <li className="hover:text-blue-900 cursor-pointer">Dept. of Electrical and Electronics Engineering</li>
-                <li className="hover:text-blue-900 cursor-pointer">Dept. of Electronics and Communication Engineering</li>
-                <li className="hover:text-blue-900 cursor-pointer">Dept. of Computer Science Engineering</li>
-                <li className="hover:text-blue-900 cursor-pointer">Dept. of Computer Science Engineering (Data Science)</li>
-                <li className="hover:text-blue-900 cursor-pointer">Dept. of Applied Sciences</li>
+                <a href="/mechanical-department">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Dept. of Mechanical Engineering
+                  </li>
+                </a>
+                <a href="/electrical-department">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Dept. of Electrical and Electronics Engineering
+                  </li>
+                </a>
+                <a href="/electronics-and-communication-department">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Dept. of Electronics and Communication Engineering
+                  </li>
+                </a>
+                <a href="/computer-science-department">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Dept. of Computer Science Engineering
+                  </li>
+                </a>
+                <a href="/data-science-department">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Dept. of Computer Science Engineering (Data Science)
+                  </li>
+                </a>
+                <a href="/applied-science-department">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Dept. of Applied Sciences
+                  </li>
+                </a>
               </ul>
             )}
           </li>
           {/* Mobile Activities */}
           <li className="py-2 border-b border-gray-100">
-            <div className="flex items-center justify-between cursor-pointer hover:text-blue-900" onClick={() => toggleMobileDropdown('Activities')}>
+            <div
+              className="flex items-center justify-between cursor-pointer hover:text-blue-900"
+              onClick={() => toggleMobileDropdown("Activities")}
+            >
               <span>Activities</span>
-              <ChevronDown size={16} className={`transition-transform ${openMobileDropdown === 'Activities' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${openMobileDropdown === "Activities" ? "rotate-180" : ""}`}
+              />
             </div>
-            {openMobileDropdown === 'Activities' && (
+            {openMobileDropdown === "Activities" && (
               <ul className="pl-4 mt-2 space-y-2">
                 <li className="hover:text-blue-900 cursor-pointer">NSS</li>
                 <li className="hover:text-blue-900 cursor-pointer">IEEE</li>
                 <li className="hover:text-blue-900 cursor-pointer">ASME</li>
                 <li className="hover:text-blue-900 cursor-pointer">SAE CEA</li>
-                <li className="hover:text-blue-900 cursor-pointer">Department Clubs</li>
+                <li className="hover:text-blue-900 cursor-pointer">
+                  Department Clubs
+                </li>
               </ul>
             )}
           </li>
           {/* Mobile Institution */}
           <li className="py-2 border-b border-gray-100">
-            <div className="flex items-center justify-between cursor-pointer hover:text-blue-900" onClick={() => toggleMobileDropdown('Institution')}>
+            <div
+              className="flex items-center justify-between cursor-pointer hover:text-blue-900"
+              onClick={() => toggleMobileDropdown("Institution")}
+            >
               <span>Institution</span>
-              <ChevronDown size={16} className={`transition-transform ${openMobileDropdown === 'Institution' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${openMobileDropdown === "Institution" ? "rotate-180" : ""}`}
+              />
             </div>
-            {openMobileDropdown === 'Institution' && (
+            {openMobileDropdown === "Institution" && (
               <ul className="pl-4 mt-2 space-y-2">
-                <li className="hover:text-blue-900 cursor-pointer">Institution Structure</li>
-                <li className="hover:text-blue-900 cursor-pointer">Campus Layout</li>
-                <li className="hover:text-blue-900 cursor-pointer">College Hostels</li>
-                <li className="hover:text-blue-900 cursor-pointer">College Bus</li>
+                <a href="/institution-structure">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Institution Structure
+                  </li>
+                </a>
+                <a href="/campus-layout">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    Campus Layout
+                  </li>
+                </a>
+                <a href="/hostel">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    College Hostels
+                  </li>
+                </a>
+                <a href="/college-bus">
+                  <li className="hover:text-blue-900 cursor-pointer">
+                    College Bus
+                  </li>
+                </a>
               </ul>
             )}
           </li>
-          <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">Admissions</li>
-          <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">Research</li>
-          <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">Campus</li>
+          <a href="/admissions">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Admissions
+            </li>
+          </a>
+          <a href="/placement">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Placement
+            </li>
+          </a>
+          <a href="/pta">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              PTA
+            </li>
+          </a>
+          <a href="/library">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Library
+            </li>
+          </a>
+          <a href="/alumni">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Alumni
+            </li>
+          </a>
+          <a href="/student-grievance-portal">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Grievance
+            </li>
+          </a>
+          <a href="/quotation">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Quotation / Tenders
+            </li>
+          </a>
+          <a href="/careers">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Career
+            </li>
+          </a>
           {/* Mobile Downloads */}
           <li className="py-2 border-b border-gray-100">
-            <div className="flex items-center justify-between cursor-pointer hover:text-blue-900" onClick={() => toggleMobileDropdown('Downloads')}>
+            <div
+              className="flex items-center justify-between cursor-pointer hover:text-blue-900"
+              onClick={() => toggleMobileDropdown("Downloads")}
+            >
               <span>Downloads</span>
-              <ChevronDown size={16} className={`transition-transform ${openMobileDropdown === 'Downloads' ? 'rotate-180' : ''}`} />
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${openMobileDropdown === "Downloads" ? "rotate-180" : ""}`}
+              />
             </div>
-            {openMobileDropdown === 'Downloads' && (
+            {openMobileDropdown === "Downloads" && (
               <ul className="pl-4 mt-2 space-y-2">
                 <li className="hover:text-blue-900 cursor-pointer">Students</li>
                 <li className="hover:text-blue-900 cursor-pointer">Staff</li>
-                <li className="hover:text-blue-900 cursor-pointer">Campus Rules</li>
-                <li className="hover:text-blue-900 cursor-pointer">Syllabus & Regulations</li>
-                <li className="hover:text-blue-900 cursor-pointer">Question Papers</li>
+                <li className="hover:text-blue-900 cursor-pointer">
+                  Campus Rules
+                </li>
+                <li className="hover:text-blue-900 cursor-pointer">
+                  Syllabus & Regulations
+                </li>
+                <li className="hover:text-blue-900 cursor-pointer">
+                  Question Papers
+                </li>
               </ul>
             )}
           </li>
+          <a href="/contact">
+            <li className="hover:text-blue-900 cursor-pointer py-2 border-b border-gray-100">
+              Contact Us
+            </li>
+          </a>
         </ul>
       </div>
     </>
