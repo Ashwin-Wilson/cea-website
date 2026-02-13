@@ -178,7 +178,7 @@ const DownloadsPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Syllabus Card */}
           <a
-            href="https://ktu.edu.in/eu/acd/academicRegulations.htm" // Example KTU link
+            href="https://ktunotes.vipinv.me/"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex items-center justify-between"
@@ -201,7 +201,7 @@ const DownloadsPage = () => {
 
           {/* Question Papers Card */}
           <a
-            href="https://ktu.edu.in/"
+            href="https://ktunotes.vipinv.me/"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex items-center justify-between"
